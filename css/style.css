@@ -1,0 +1,412 @@
+/* =========================================
+   VARIABLES ET PALETTE OFFICIELLE
+   ========================================= */
+:root {
+    --bg-main: #F2F3FF;
+    --bg-secondary: #FAF8FF;
+    --vert-principal: #004C22;
+    --lavande: #EAEDFF;
+    --peche: #FFDCC3;
+    --texte-principal: #000000;
+    --texte-secondaire: #52525B;
+    --vert-texte: #166534;
+    --blanc: #FFFFFF;
+    --fond-reussite: #E5F3E8;
+    
+    --font-titles: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* =========================================
+   STYLES GLOBAUX
+   ========================================= */
+body {
+    background-color: var(--bg-main);
+    color: var(--texte-principal);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-titles);
+    color: var(--texte-principal);
+}
+
+.text-secondary {
+    color: var(--texte-secondaire) !important;
+}
+
+/* =========================================
+   COMPOSANTS PERSONNALISÉS (BOUTONS, CARTES)
+   ========================================= */
+.btn-primary-custom {
+    background-color: var(--vert-principal);
+    color: var(--blanc);
+    border: 2px solid var(--vert-principal);
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: #003617;
+    border-color: #003617;
+    color: var(--blanc);
+}
+
+.btn-outline-custom {
+    background-color: transparent;
+    color: var(--texte-principal);
+    border: 1px solid #D1D5DB;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--lavande);
+    border-color: var(--lavande);
+    color: var(--texte-principal);
+}
+
+.badge-custom {
+    background-color: var(--lavande);
+    color: var(--vert-principal);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.card-custom {
+    background-color: var(--bg-secondary);
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.step-number {
+    font-family: var(--font-titles);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--lavande);
+    /* Astuce pour un effet de contour sur le chiffre */
+    -webkit-text-stroke: 1px var(--vert-principal);
+}
+
+/* =========================================
+   HEADER & LOGO
+   ========================================= */
+.header {
+    background-color: var(--bg-main);
+}
+
+.logo-icon {
+    background-color: var(--vert-principal);
+    color: var(--blanc);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: var(--font-titles);
+}
+
+.logo-text {
+    font-family: var(--font-titles);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--texte-principal);
+}
+
+.nav-link {
+    color: var(--texte-secondaire);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--vert-principal);
+}
+
+.burger-menu {
+    color: var(--texte-principal);
+    border: none;
+    padding: 5px;
+}
+
+/* =========================================
+   SECTION HÉRO & DECORATIONS
+   ========================================= */
+.hero-section {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+
+.text-underline-green {
+    position: relative;
+    display: inline-block;
+}
+.text-underline-green::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    height: 6px;
+    background-color: rgba(4, 187, 86, 0.692);
+    z-index: -1;
+    border-radius: 4px;
+}
+
+.hero-map-container {
+    border: 1px solid #E5E7EB;
+}
+/* =========================================
+   NOUVEAUX COMPOSANTS (Lot 2 - Partie 2)
+   ========================================= */
+
+.bg-main {
+    background-color: var(--bg-main) !important;
+}
+
+/* Boîtes d'icônes */
+.icon-box {
+    width: 45px;
+    height: 45px;
+    background-color: var(--lavande);
+    color: var(--vert-principal);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-lavande { background-color: var(--lavande) !important; }
+.bg-peche { background-color: var(--peche) !important; }
+.bg-vert-principal { background-color: var(--vert-principal) !important; }
+.text-vert-principal { color: var(--vert-principal) !important; }
+
+/* Bouton Lavande (pour les cartes acteurs) */
+.btn-lavande-custom {
+    background-color: var(--lavande);
+    color: var(--vert-principal);
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-lavande-custom:hover {
+    background-color: #D8DEFF; /* Une version un peu plus foncée de la lavande */
+    color: var(--vert-principal);
+}
+
+/* Bandeau CTA (Appel à l'action) */
+.cta-banner {
+    background-color: var(--vert-principal);
+    position: relative;
+}
+
+/* Cercles décoratifs pour le bandeau CTA */
+.cta-circle-1 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
+    pointer-events: none;
+}
+
+.cta-circle-2 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    bottom: -50px;
+    right: 150px;
+    pointer-events: none;
+}
+
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.footer {
+    background-color: var(--bg-main);
+    border-top: 1px solid #E5E7EB;
+}
+
+/* =========================================
+   RESPONSIVE (Ajustements mobiles)
+   ========================================= */
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding-top: 1.5rem;
+        padding-bottom: 3rem;
+    }
+    .display-5 {
+        font-size: 2.2rem;
+    }
+}
+/* Ajustement pour mobile sur le bandeau CTA */
+@media (max-width: 768px) {
+    .cta-banner {
+        padding: 2rem !important;
+    }
+    .cta-banner p {
+        width: 100% !important;
+    }
+}
+
+/* =========================================
+   PAGE DE CONNEXION (Lot 3)
+   ========================================= */
+.login-page {
+    background: linear-gradient(135deg, var(--bg-main) 0%, #E8ECFF 100%);
+}
+
+.login-logo-box {
+    background-color: #F4FDF6; /* Vert très très clair */
+    border: 1px solid #D1FAE5;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Champs de formulaire personnalisés */
+.input-group-custom .form-control {
+    border-color: #E5E7EB;
+    height: 48px;
+}
+.input-group-custom .form-control:focus {
+    box-shadow: none;
+    border-color: var(--vert-principal);
+}
+
+/* Encart Démonstration */
+.demo-box {
+    background-color: var(--lavande);
+    border: 1px solid #D8DEFF;
+}
+
+.demo-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Boutons de démonstration */
+.demo-btn {
+    transition: all 0.2s ease;
+}
+.demo-btn:hover {
+    background-color: #F8F9FA !important;
+    border-color: var(--vert-principal) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+
+/* =========================================
+   PAGE D'INSCRIPTION (Lot 4)
+   ========================================= */
+.account-type-card {
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: var(--bg-main);
+}
+
+.account-type-card:hover {
+    border-color: var(--vert-principal);
+    background-color: #F8F9FA;
+}
+
+/* Style pour l'option sélectionnée */
+.account-type-card.active {
+    border: 2px solid var(--vert-principal);
+    background-color: #F4FDF6;
+}
+
+.account-type-card .form-check-input:checked {
+    background-color: var(--vert-principal);
+    border-color: var(--vert-principal);
+}
+
+/* =========================================
+   PAGE FONCTIONNEMENT (Lot 5)
+   ========================================= */
+
+/* Badge numéroté pour les étapes */
+.step-badge {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-family: var(--font-titles);
+}
+
+/* Cercles du schéma de transmission */
+.schema-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+/* Flèches du schéma */
+.schema-arrow {
+    color: #9CA3AF;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Timeline des statuts */
+.timeline-item {
+    border-bottom: 1px solid #E5E7EB;
+    padding-bottom: 1.5rem;
+}
+.timeline-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Ajustement pour mobile sur le schéma */
+@media (max-width: 767.98px) {
+    .schema-arrow {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+}

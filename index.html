@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekolo Waste - Ensemble, donnons une nouvelle vie à nos déchets</title>
+    
+    <!-- Bootstrap CSS (pour la grille et les utilitaires) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Notre CSS personnalisé -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+     <!-- ================= HEADER  ================= -->
+    <header class="header py-3 bg-white shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html" class="logo text-decoration-none d-flex align-items-center gap-2">
+                <div class="logo-icon">E</div>
+                <span class="logo-text">Ekolo Waste</span>
+            </a>
+            <nav class="d-none d-lg-flex gap-4">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="fonctionnement.html" class="nav-link active">Comment ça marche ?</a>
+                <a href="about.html" class="nav-link">À propos</a>
+            </nav>
+            <div class="d-none d-lg-flex gap-3 align-items-center">
+                <a href="login.html" class="btn btn-outline-custom">Connexion</a>
+                <a href="#" class="btn btn-primary-custom">Signaler un déchet</a>
+            </div>
+            <button class="btn d-lg-none burger-menu" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg>
+            </button>
+        </div>
+        <div class="collapse d-lg-none" id="mobileMenu">
+            <div class="container py-3 d-flex flex-column gap-2">
+                <a href="index.html" class="nav-link active">Accueil</a>
+                <a href="fonctionnement.html" class="nav-link">Comment ça marche ?</a>
+                <a href="about.html" class="nav-link">À propos</a>
+                <hr>
+                <a href="login.html" class="btn btn-outline-custom w-100 mb-2">Connexion</a>
+                <a href="#" class="btn btn-primary-custom w-100">Signaler un déchet</a>
+            </div>
+        </div>
+    </header>
+    
+    
+
+    <!-- ================= SECTION HÉRO ================= -->
+    <section class="hero-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Texte à gauche -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <span class="badge-custom mb-3">● Initiative urbaine Kinshasa Bopeto</span>
+                    <h1 class="display-5 fw-bold mb-3">Ensemble, donnons une <span class="text-underline-green">nouvelle vie</span> à nos déchets.</h1>
+                    <p class="text-secondary mb-4">Ekolo Waste connecte les ménages, les collecteurs et les acteurs du recyclage afin de mieux organiser la collecte, le tri et la valorisation des déchets.</p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 mb-4">
+                        <a href="#" class="btn btn-primary-custom px-4 py-2">Signaler un déchet →</a>
+                        <a href="#" class="btn btn-outline-custom px-4 py-2">Découvrir comment ça marche</a>
+                    </div>
+                    <div class="d-flex flex-wrap gap-4 text-secondary small">
+                        <span><i class="text-success">✓</i> Circuits vérifiés</span>
+                        <span><i class="text-success">✓</i> Couverture 24 communes</span>
+                        <span><i class="text-success">✓</i> Économie circulaire</span>
+                    </div>
+                </div>
+
+                <!-- Carte à droite (Image simulée) -->
+                <div class="col-lg-6">
+                    <div class="hero-map-container position-relative shadow-sm p-2 bg-white rounded-4">
+                        <!-- Utilisation d'une image libre de droits pour simuler la carte -->
+                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Carte de Kinshasa" class="img-fluid rounded-3 w-100" style="object-fit: cover; height: 350px;">
+                        <div class="position-absolute top-0 start-0 m-3 bg-white px-3 py-2 rounded-pill shadow-sm small fw-medium">
+                            <span class="text-success">●</span> Flux urbain en direct — Kinshasa
+                        </div>
+                        <div class="position-absolute bottom-0 end-0 m-3 bg-white px-3 py-2 rounded-3 shadow-sm">
+                            <div class="small fw-bold mb-1">Points de collecte</div>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-light text-dark border">Plastiques</span>
+                                <span class="badge bg-light text-dark border">Cartons</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION PARCOURS (Aperçu) ================= -->
+    <section class="py-5 bg-white">
+        <div class="container text-center mb-5">
+            <h2 class="fw-bold">Comment ça marche ?</h2>
+            <p class="text-secondary">Un processus structuré en quatre temps pour transformer la gestion des matières recyclables en action collective et fluide.</p>
+        </div>
+        <div class="container">
+            <div class="row g-4">
+                <!-- Étape 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-custom h-100 p-4">
+                        <div class="step-number mb-3">01</div>
+                        <h5 class="fw-bold">Signaler</h5>
+                        <p class="text-secondary small">Le ménage indique sa localisation, le type de déchets et la quantité. Il peut ajouter une photo descriptive pour guider le collecteur.</p>
+                    </div>
+                </div>
+                <!-- Étape 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-custom h-100 p-4">
+                        <div class="step-number mb-3">02</div>
+                        <h5 class="fw-bold">Collecter</h5>
+                        <p class="text-secondary small">Un collecteur consulte les demandes disponibles, planifie un itinéraire et accepte la mission pour organiser son passage.</p>
+                    </div>
+                </div>
+                <!-- Étape 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-custom h-100 p-4">
+                        <div class="step-number mb-3">03</div>
+                        <h5 class="fw-bold">Trier</h5>
+                        <p class="text-secondary small">Les matières collectées sont pesées et triées par catégorie. Elles sont ensuite remises à des filières de recyclage locales à haute valeur.</p>
+                    </div>
+                </div>
+                <!-- Étape 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-custom h-100 p-4">
+                        <div class="step-number mb-3">04</div>
+                        <h5 class="fw-bold">Valoriser</h5>
+                        <p class="text-secondary small">Les matières recyclables sont mises à disposition des industries partenaires et transformées en nouveaux produits durables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- ================= SECTION ACTEURS ================= -->
+    <section class="py-5 bg-main">
+        <div class="container text-center mb-5">
+            <span class="badge-custom mb-2">ÉCOSYSTÈME UNIFIÉ</span>
+            <h2 class="fw-bold">Une solution adaptée à chaque acteur</h2>
+            <p class="text-secondary">Des interfaces spécialisées et étanches pour permettre à chacun de jouer son rôle sans friction ni confusion dans la chaîne de gestion.</p>
+        </div>
+        <div class="container">
+            <div class="row g-4">
+                <!-- Carte Ménage -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-custom h-100 p-4">
+                        <div class="icon-box mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16"><path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/></svg></div>
+                        <h5 class="fw-bold">Ménages</h5>
+                        <p class="text-secondary small mb-3">Signalez vos déchets domestiques triés et demandez un ramassage ponctuel ou régulier en toute simplicité.</p>
+                        <ul class="list-unstyled small text-secondary mb-4">
+                            <li class="mb-1">✓ Déclaration avec photo</li>
+                            <li class="mb-1">✓ Notification de passage</li>
+                        </ul>
+                        <a href="login.html" class="btn btn-lavande-custom w-100 mt-auto">Accéder à mon espace →</a>
+                    </div>
+                </div>
+                <!-- Carte Collecteur -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-custom h-100 p-4">
+                        <div class="icon-box mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg></div>
+                        <h5 class="fw-bold">Collecteurs</h5>
+                        <p class="text-secondary small mb-3">Consultez et gérez les demandes de collecte groupées dans votre zone pour rationaliser chaque intervention.</p>
+                        <ul class="list-unstyled small text-secondary mb-4">
+                            <li class="mb-1">✓ Itinéraires par quartier</li>
+                            <li class="mb-1">✓ Validation des pesées</li>
+                        </ul>
+                        <a href="login.html" class="btn btn-lavande-custom w-100 mt-auto">Accéder à mon espace →</a>
+                    </div>
+                </div>
+                <!-- Carte Recycleur -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-custom h-100 p-4">
+                        <div class="icon-box mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-recycle" viewBox="0 0 16 16"><path d="M9.302 1.256a1.5 1.5 0 0 0-2.604 0l-1.704 2.98a.5.5 0 0 0 .869.497l1.703-2.981a.5.5 0 0 1 .868 0l2.54 4.444-1.256-.337a.5.5 0 1 0-.26.966l2.415.647a.5.5 0 0 0 .613-.353l.647-2.415a.5.5 0 1 0-.966-.259l-.333 1.242-2.532-4.431zM2.975 12.541a1.5 1.5 0 0 0 2.604 0l1.704-2.98a.5.5 0 0 0-.869-.497L4.711 12.045a.5.5 0 0 1-.868 0L1.303 7.601l1.256.337a.5.5 0 1 0 .26-.966l-2.415-.647a.5.5 0 0 0-.613.353l-.647 2.415a.5.5 0 1 0 .966.259l.333-1.242 2.532 4.431zm9.39-1.041a1.5 1.5 0 0 1-2.604 0l-1.704-2.98a.5.5 0 0 1 .869-.497l1.703 2.981a.5.5 0 0 0 .868 0l2.54-4.444-1.256.337a.5.5 0 1 1-.26-.966l2.415-.647a.5.5 0 0 1 .613.353l.647 2.415a.5.5 0 1 1-.966.259l-.333-1.242-2.532 4.431z"/></svg></div>
+                        <h5 class="fw-bold">Recycleurs</h5>
+                        <p class="text-secondary small mb-3">Identifiez les matières valorisables disponibles en temps réel pour alimenter vos chaînes de transformation.</p>
+                        <ul class="list-unstyled small text-secondary mb-4">
+                            <li class="mb-1">✓ Stocks de matières triées</li>
+                            <li class="mb-1">✓ Commandes & lots vérifiés</li>
+                        </ul>
+                        <a href="login.html" class="btn btn-lavande-custom w-100 mt-auto">Accéder à mon espace →</a>
+                    </div>
+                </div>
+                <!-- Carte Admin -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card-custom h-100 p-4">
+                        <div class="icon-box mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16"><path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/><path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/></svg></div>
+                        <h5 class="fw-bold">Administrateur</h5>
+                        <p class="text-secondary small mb-3">Supervisez les opérations globales de la plateforme, cartographiez les volumes et coordonnez les équipes.</p>
+                        <ul class="list-unstyled small text-secondary mb-4">
+                            <li class="mb-1">✓ Tableaux de bord municipaux</li>
+                            <li class="mb-1">✓ Gestion des accréditations</li>
+                        </ul>
+                        <a href="login.html" class="btn btn-lavande-custom w-100 mt-auto">Accéder à mon espace →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION POURQUOI EKOLO WASTE ================= -->
+    <section class="py-5 bg-white">
+        <div class="container text-center mb-5">
+            <span class="badge-custom mb-2">ATOUTS OPÉRATIONNELS</span>
+            <h2 class="fw-bold">Pourquoi Ekolo Waste ?</h2>
+            <p class="text-secondary">Une réponse pragmatique et outillée face aux défis logistiques du traitement des résidus dans la métropole kinésioise.</p>
+        </div>
+        <div class="container">
+            <div class="row g-4">
+                <!-- Bloc 1 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="card-custom h-100 p-4 d-flex flex-row gap-4 align-items-center">
+                        <div class="flex-grow-1">
+                            <div class="icon-box mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-map" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z"/></svg></div>
+                            <h5 class="fw-bold">Meilleure organisation de la collecte</h5>
+                            <p class="text-secondary small mb-0">Structuration des tournées de ramassage pour éviter les doubles passages, fluidifier les circuits et réduire les coûts opérationnels.</p>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Collecte" class="rounded-3 d-none d-md-block" style="width: 120px; height: 120px; object-fit: cover;">
+                    </div>
+                </div>
+                <!-- Bloc 2 -->
+                <div class="col-md-6 col-lg-6">
+                    <div class="card-custom h-100 p-4">
+                        <div class="icon-box mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16"><path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/></svg></div>
+                        <h5 class="fw-bold">Mise en relation directe des acteurs</h5>
+                        <p class="text-secondary small mb-2">Suppression des intermédiaires informels et liaison instantanée entre les foyers producteurs et les collecteurs accrédités pour des délais d'intervention réduits.</p>
+                        <span class="small text-success fw-medium">✓ Échanges transparents et coordonnés</span>
+                    </div>
+                </div>
+                <!-- Bloc 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-custom h-100 p-4">
+                        <div class="icon-box mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16"><path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/><path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/></svg></div>
+                        <h5 class="fw-bold">Visibilité sur les déchets disponibles</h5>
+                        <p class="text-secondary small mb-3">Cartographie dynamique des gisements de matières recyclables par commune afin d'anticiper les besoins logistiques et le stockage.</p>
+                        <span class="small text-success fw-medium">✓ Visualisation géo-localisée</span>
+                    </div>
+                </div>
+                <!-- Bloc 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-custom h-100 p-4">
+                        <div class="icon-box mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-recycle" viewBox="0 0 16 16"><path d="M9.302 1.256a1.5 1.5 0 0 0-2.604 0l-1.704 2.98a.5.5 0 0 0 .869.497l1.703-2.981a.5.5 0 0 1 .868 0l2.54 4.444-1.256-.337a.5.5 0 1 0-.26.966l2.415.647a.5.5 0 0 0 .613-.353l.647-2.415a.5.5 0 1 0-.966-.259l-.333 1.242-2.532-4.431zM2.975 12.541a1.5 1.5 0 0 0 2.604 0l1.704-2.98a.5.5 0 0 0-.869-.497L4.711 12.045a.5.5 0 0 1-.868 0L1.303 7.601l1.256.337a.5.5 0 1 0 .26-.966l-2.415-.647a.5.5 0 0 0-.613.353l-.647 2.415a.5.5 0 1 0 .966.259l.333-1.242 2.532 4.431zm9.39-1.041a1.5 1.5 0 0 1-2.604 0l-1.704-2.98a.5.5 0 0 1 .869-.497l1.703 2.981a.5.5 0 0 0 .868 0l2.54-4.444-1.256.337a.5.5 0 1 1-.26-.966l2.415-.647a.5.5 0 0 1 .613.353l.647 2.415a.5.5 0 1 1-.966.259l-.333-1.242-2.532 4.431z"/></svg></div>
+                        <h5 class="fw-bold">Valorisation des matières recyclables</h5>
+                        <p class="text-secondary small mb-3">Reconversion utile des plastiques, métaux et cartons vers les usines locales de recyclage pour alimenter une économie régénérative pérenne.</p>
+                        <span class="small text-success fw-medium">✓ Seconde vie aux matériaux</span>
+                    </div>
+                </div>
+                <!-- Bloc 5 -->
+                <div class="col-md-12 col-lg-4">
+                    <div class="card-custom h-100 p-4">
+                        <div class="icon-box mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16"><path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg></div>
+                        <h5 class="fw-bold">Suivi des opérations en temps réel</h5>
+                        <p class="text-secondary small mb-3">Supervision continue du statut de chaque déchet : de son signalement initial jusqu'à sa pesée et sa livraison en centre de recyclage.</p>
+                        <span class="small text-success fw-medium">✓ Mises à jour en direct</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION IMPACT ================= -->
+    <section class="py-5 bg-main">
+        <div class="container text-center mb-5">
+            <span class="badge-custom mb-2">TRANSFORMATION GLOBALE</span>
+            <h2 class="fw-bold">L'impact au cœur de Kinshasa</h2>
+            <p class="text-secondary">Trois piliers interdépendants pour construire une ville durable, solidaire et prospère pour les générations futures.</p>
+        </div>
+        <div class="container">
+            <div class="row g-4">
+                <!-- Pilier 1 -->
+                <div class="col-md-4">
+                    <div class="card-custom h-100 p-4 border-0" style="background-color: #F4FDF6;">
+                        <div class="icon-box bg-success text-white mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-tree" viewBox="0 0 16 16"><path d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5zM8 1.85 10.468 5.5H5.532L8 1.85Zm-1.5 4.65h3l1.83 2.744H5.67L6.5 6.5Zm-1.06 3.744h5.12l1.256 2.512H4.184l1.256-2.512Z"/></svg></div>
+                        <h6 class="text-uppercase text-success small fw-bold mb-2">Pilier 01</h6>
+                        <h5 class="fw-bold">Impact Environnemental</h5>
+                        <p class="text-secondary small mb-4">Contribuer concrètement à une meilleure gestion des déchets urbains, réduire l'encombrement des caniveaux et rivières de Kinshasa, et maximiser la valorisation durable des matières récupérées.</p>
+                        <div class="bg-white p-3 rounded-3 small text-secondary">
+                            <strong class="text-dark d-block mb-1"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-check-circle text-success me-1" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/></svg> Rivières & artères préservées</strong>
+                            Diminution significative des blocages hydrauliques lors des pluies saisonnières.
+                        </div>
+                    </div>
+                </div>
+                <!-- Pilier 2 -->
+                <div class="col-md-4">
+                    <div class="card-custom h-100 p-4 border-0" style="background-color: #F4F6FF;">
+                        <div class="icon-box bg-lavande text-vert-principal mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg></div>
+                        <h6 class="text-uppercase text-primary small fw-bold mb-2">Pilier 02</h6>
+                        <h5 class="fw-bold">Impact Social</h5>
+                        <p class="text-secondary small mb-4">Faciliter la mise en relation bienveillante et transparente entre les ménages, les collecteurs de proximité et les artisans recycleurs, valorisant le travail d'assainissement communautaire.</p>
+                        <div class="bg-white p-3 rounded-3 small text-secondary">
+                            <strong class="text-dark d-block mb-1"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-check-circle text-primary me-1" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/></svg> Inclusion & reconnaissance</strong>
+                            Valorisation du statut des agents de propreté et participation citoyenne accrue.
+                        </div>
+                    </div>
+                </div>
+                <!-- Pilier 3 -->
+                <div class="col-md-4">
+                    <div class="card-custom h-100 p-4 border-0" style="background-color: #FFF8F3;">
+                        <div class="icon-box bg-peche text-dark mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z"/></svg></div>
+                        <h6 class="text-uppercase text-warning small fw-bold mb-2" style="color: #9A3412 !important;">Pilier 03</h6>
+                        <h5 class="fw-bold">Impact Économique</h5>
+                        <p class="text-secondary small mb-4">Faciliter l'accès aux matières premières secondaires, stimuler les petites et moyennes entreprises locales de transformation et soutenir financièrement la chaîne de ramassage.</p>
+                        <div class="bg-white p-3 rounded-3 small text-secondary">
+                            <strong class="text-dark d-block mb-1"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-check-circle text-warning me-1" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/></svg> Économie circulaire locale</strong>
+                            Création d'opportunités de revenus durables dans les communes de Kinshasa.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- ================= SECTION CTA (Bandeau Vert) ================= -->
+    <section class="py-4 mb-5">
+        <div class="container">
+            <div class="cta-banner rounded-4 p-5 text-white position-relative overflow-hidden">
+                <div class="position-relative z-1">
+                    <span class="badge bg-white text-success fw-bold mb-3 px-3 py-2 rounded-pill">Chaque geste compte pour Kinshasa</span>
+                    <h2 class="display-6 fw-bold mb-3 text-white">Un déchet signalé est un déchet<br>qui peut être mieux pris en charge.</h2>
+                    <p class="mb-4 opacity-75 w-75">Rejoignez la dynamique citoyenne Ekolo Waste dès aujourd'hui. Que vous soyez un particulier, un collecteur indépendant ou un transformateur industriel, prenez part à l'assainissement moderne de notre capitale.</p>
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a href="#" class="btn btn-light text-success fw-bold px-4 py-2 rounded-pill">Signaler un déchet</a>
+                        <a href="#" class="btn btn-outline-light px-4 py-2 rounded-pill">Découvrir Ekolo Waste →</a>
+                    </div>
+                </div>
+                <!-- Cercles décoratifs en arrière-plan -->
+                <div class="cta-circle-1"></div>
+                <div class="cta-circle-2"></div>
+            </div>
+        </div>
+    </section>   
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a href="index.html" class="logo text-decoration-none d-flex align-items-center gap-2 mb-3">
+                        <div class="logo-icon">E</div>
+                        <span class="logo-text">Ekolo Waste</span>
+                    </a>
+                    <p class="text-secondary small pe-lg-5">Plateforme civique numérique pour organiser la collecte, le tri et la valorisation des déchets à Kinshasa.</p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="fw-bold mb-3">Navigation</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="index.html" class="text-secondary text-decoration-none">Accueil</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">Comment ça marche ?</a></li>
+                        <li><a href="#" class="text-secondary text-decoration-none">À propos</a></li>
+                        <li><a href="login.html" class="text-secondary text-decoration-none">Connexion</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h6 class="fw-bold mb-3">Contact & Présence</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 small text-secondary">
+                        <li>contact@ekolowaste.cd</li>
+                        <li>Kinshasa - RDC</li>
+                        <li>Gombe - Limete - Ngaliema - Bandalungwa</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 border-secondary opacity-25">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-secondary">
+                <p class="mb-0">© 2026 Ekolo Waste. Tous droits réservés.</p>
+                <p class="mb-0">Kinshasa Bopeto - Économie Circulaire</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (pour le menu mobile) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Notre JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
